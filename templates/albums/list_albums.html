@@ -2,5 +2,10 @@
 
 {% block content %}
 <h1>Django Music</h1>
+{% for album in albums %}
+<h2>{{ album.title }}</h2>
+<p>{{ album.artist }}</p>
+
+{% endfor %}
 
 {% endblock %}
