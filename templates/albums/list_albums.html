@@ -1,13 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Django Music</h1>
-<a href="{% url 'add_album'%}" class="btn btn-primary">Add New</a>
+<h1>Django Music Collection</h1>
+<a href="{% url 'add_album' %}">Add New</a>
+
+
 
 {% for album in albums %}
-<h2>{{ album.title }}</h2>
-<h1>{{ album.artist }}</h1>
+<div>
+    <h3>{{ album.artist }}</h3>
+    <p>{{ album.title }}</p>
+   
+    <a href="{% url 'edit_album' album.pk %}">Edit Album</a>
+    <a href="{% url 'detail_album' album.pk %}" class="btn btn-primary">Details</a>
+    <a href="{% url 'delete_albums' album.pk %}" class="btn btn-primary">Delete</a>
 
+</div>
 {% endfor %}
 
+
 {% endblock %}
+
+
+
+
+

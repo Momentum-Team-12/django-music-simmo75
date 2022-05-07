@@ -16,8 +16,17 @@
                           POST | create a new album                     
     -   name: album_detail
         path: `/albums/<int:pk>`
-        handles requests: GET  | show details about a single album                     |
-
+        handles requests: GET  | show details about a single album  
+        
+    -   name: edit_album
+        path: `/albums/<int:pk>/edit`
+        handles requests:   |  GET  | show a form to edit a new album                       |
+                            | POST | update a specific album  
+    -   name: delete_album
+        path: `/albums/<int:pk>/delete`
+        handles requests:   | GET  | show a confirmation screen to delete a specific album |
+                            | POST | delete a specific album 
+                            
 - Templates
 
 - URL's
