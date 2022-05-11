@@ -44,6 +44,3 @@ def edit_album(request, pk):
             form.save()
             return redirect(to='list_albums')
     return render(request, "albums/edit_album.html", {"form": form, "album": album})
-
-
-        
